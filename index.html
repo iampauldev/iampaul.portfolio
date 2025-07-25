@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iam Paul's Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="assets/iam_pic.jpg" alt="Iam Paul Bote" class="avatar" />
+      <h1>Iam Paul Bote</h1>
+    </div>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="skill.html">Skill</a>
+      <a href="work_history.html">Work History</a>
+
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <a href="about.html" class="section-link">
+    <section id="about" class="card-section reveal">
+      <h2>About Me</h2>
+      <p>Click to learn more about me and what drives my work as a developer.</p>
+    </section>
+  </a>
+
+  <a href="projects.html" class="section-link">
+    <section id="projects" class="card-section reveal">
+      <h2>Projects</h2>
+      <p>Explore some of the tools and systems I’ve built to automate workflows and improve reliability.</p>
+    </section>
+  </a>
+
+  <a href="work_history.html" class="section-link">
+    <section id="work_history" class="card-section reveal">
+      <h2>Work History</h2>
+      <p>View my work history up to present.</p>
+    </section>
+  </a>
+
+  <a href="skill.html" class="section-link">
+    <section id="skill" class="card-section reveal">
+      <h2>Skill</h2>
+      <p>See what I can bring to your development team.</p>
+    </section>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Iam Paul Bote</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script>
+    // Reveal on scroll
+    function applyReveal() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', applyReveal);
+    window.addEventListener('load', applyReveal);
+
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-menu');
+    burger.addEventListener('click', () => nav.classList.toggle('show'));
+
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>

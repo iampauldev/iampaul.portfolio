@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Iam Paul Bote</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="assets/iam_pic.jpg" alt="Iam Paul Bote" class="avatar" />
+      <h1>Iam Paul Bote</h1>
+    </div>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="skill.html">Skill</a>
+      <a href="work_history.html">Work History</a>
+
+    </nav>
+  </header>
+
+  <!-- Skill Section -->
+   <section>
+  <skill-section>
+    <div class="skillset-header">
+      <h2>My Skillset</h2>
+      <div class="skill-search">
+        <input type="text" id="skillSearchInput" placeholder="Search skills..." />
+      </div>
+    </div>
+
+    <!-- Category: 🛠 Core Technical Skills -->
+    <h3>🛠 Core Technical Skills</h3>
+    <div class="skills-grid">
+      <!-- Sample Skill Item -->
+      <div class="skill-item reveal" onclick="toggleSkill(this)">
+        <div class="skill-title">
+          <i class="fab fa-python"></i>
+          <span class="skill-name">Python</span>
+          <span class="badge advanced">Advanced</span>
+        </div>
+        <div class="skill-description">
+          Used for automation, backend scripting, and data parsing.<br>
+          <strong>Impact:</strong> Reduced manual workload by 60% through automated workflows at Amdocs.<br>
+        </div>
+      </div>
+
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-terminal"></i>
+		<span class="skill-name">Shell Scripting (Unix)</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Automates system-level tasks and deployment pipelines.<br>
+		<strong>Impact:</strong> Streamlined server operations and reduced downtime.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-code"></i>
+		<span class="skill-name">Perl</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Used for legacy automation and text processing tasks.<br>
+		<strong>Impact:</strong> Maintained and modernized legacy scripts for production systems.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-database"></i>
+		<span class="skill-name">PostgreSQL</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Relational database management and query optimization.<br>
+		<strong>Impact:</strong> Improved query performance and data integrity in reporting systems.
+		</div>
+	</div>
+	</div>
+		</div>
+
+    <!-- Category: ⚙️ DevOps & Automation -->
+    <h3 style="margin-top: 2rem;">⚙️ DevOps & Automation</h3>
+    <div class="skills-grid">
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fab fa-git-alt"></i>
+		<span class="skill-name">Git & GitLab</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Version control, branching strategies, and CI/CD pipelines.<br>
+		<strong>Impact:</strong> Enabled seamless team collaboration and automated deployments.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-robot"></i>
+		<span class="skill-name">Process Automation</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Automated repetitive tasks and system checks.<br>
+		<strong>Impact:</strong> Saved 20+ hours/month in manual effort.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-cloud"></i>
+		<span class="skill-name">AWS (Basic)</span>
+		<span class="badge familiar">Familiar</span>
+		</div>
+		<div class="skill-description">
+		Familiar with EC2, S3, IAM, and deployment basics.<br>
+		<strong>Impact:</strong> Still on learning path, but foundational knowledge for cloud deployments.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-heartbeat"></i>
+		<span class="skill-name">Site Reliability Engineering (SRE)</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Ensuring system reliability, scalability, and uptime.<br>
+		<strong>Impact:</strong> Reduced incident response time and improved monitoring.
+		</div>
+	</div>
+	</div>
+    </div>
+
+    <!-- Category: 🧠 Problem Solving & Engineering -->
+    <h3 style="margin-top: 2rem;">🧠 Problem Solving & Engineering</h3>
+    <div class="skills-grid">
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-bug"></i>
+		<span class="skill-name">Root Cause Analysis</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Diagnosing and resolving critical system issues.<br>
+		<strong>Impact:</strong> Prevented recurring outages by identifying underlying problems.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-tachometer-alt"></i>
+		<span class="skill-name">Performance Optimization</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Improved system speed and responsiveness.<br>
+		<strong>Impact:</strong> Reduced load times and improved user experience.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-check-circle"></i>
+		<span class="skill-name">Code Review</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Ensuring code quality and maintainability.<br>
+		<strong>Impact:</strong> Reduced bugs and improved team coding standards.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-bug-slash"></i>
+		<span class="skill-name">Debugging</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Identifying and resolving code and system issues efficiently.<br>
+		<strong>Impact:</strong> Reduced production bugs and improved system stability.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-cubes"></i>
+		<span class="skill-name">Object-Oriented Programming (OOP)</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Designing modular, reusable, and maintainable code structures.<br>
+		<strong>Impact:</strong> Improved code scalability and reduced technical debt.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-vial"></i>
+		<span class="skill-name">Testing</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Writing and executing unit, integration, and regression tests.<br>
+		<strong>Impact:</strong> Ensured code reliability and reduced post-deployment issues.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-project-diagram"></i>
+		<span class="skill-name">SDLC</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Understanding of the full Software Development Life Cycle.<br>
+		<strong>Impact:</strong> Improved planning, execution, and delivery of software projects.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-chart-line"></i>
+		<span class="skill-name">Data Analysis & Reporting</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Interpreting data trends and generating actionable reports.<br>
+		<strong>Impact:</strong> Delivered insights that improved system performance and informed team decisions.<br>
+		</div>
+	</div>
+	</div>
+    </div>
+
+
+    <!-- Category: 🤝 Professional Strengths -->
+    <h3 style="margin-top: 2rem;">🤝 Professional Strengths</h3>
+    <div class="skills-grid">
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-lightbulb"></i>
+		<span class="skill-name">Critical Thinking</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Solving complex problems with logical reasoning.<br>
+		<strong>Impact:</strong> Delivered solutions under pressure with clarity.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-eye"></i>
+		<span class="skill-name">Attention to Detail</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Delivering high-quality work with precision.<br>
+		<strong>Impact:</strong> Reduced production issues and improved QA outcomes.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-users-cog"></i>
+		<span class="skill-name">Teamwork</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Collaborating effectively with cross-functional teams.<br>
+		<strong>Impact:</strong> Delivered high-quality solutions through shared ownership.
+		</div>
+	</div>
+
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-users-cog"></i>
+		<span class="skill-name">Leadership</span>
+		<span class="badge intermediate">Intermediate</span>
+		</div>
+		<div class="skill-description">
+		Proven ability to lead cross-functional initiatives, drive design consistency, and mentor peers.<br>
+		<strong>Impact:</strong> Spearheaded collaborative solutions across development and support teams in optimizing workflows.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-clock"></i>
+		<span class="skill-name">Time Management</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Prioritizing tasks and meeting deadlines consistently.<br>
+		<strong>Impact:</strong> Delivered projects on time without compromising quality.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-tasks"></i>
+		<span class="skill-name">Assessment</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Evaluating systems, code, and team performance.<br>
+		<strong>Impact:</strong> Identified improvement areas and optimized workflows.
+		</div>
+	</div>
+	
+	<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-sync-alt"></i>
+		<span class="skill-name">Agile</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Practicing iterative development and continuous delivery.<br>
+		<strong>Impact:</strong> Improved adaptability and team velocity.
+		</div>
+	</div>
+
+		<div class="skill-item reveal" onclick="toggleSkill(this)">
+		<div class="skill-title">
+		<i class="fas fa-sync-alt"></i>
+		<span class="skill-name">Telecom Process</span>
+		<span class="badge advanced">Advanced</span>
+		</div>
+		<div class="skill-description">
+		Experience with mediation system. Involved in fault isolation, network element testing, and escalation handling across mobile and data services.<br>
+		<strong>Impact:</strong> Supported critical escalation paths across mobile Voice, SMS, IOT, and Data services.
+		</div>
+	</div>
+
+    </div>
+  </skill-section>
+  </section>
+</body>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Iam Paul Bote</p>
+  </footer>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle skill descriptions
+    function toggleSkill(skill) {
+      const desc = skill.querySelector('.skill-description');
+      desc.classList.toggle('show');
+    }
+
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-menu');
+    burger.addEventListener('click', () => nav.classList.toggle('show'));
+
+	  // Skill search filter
+  const searchInput = document.getElementById("skillSearchInput");
+  const skillItems = document.querySelectorAll(".skill-item");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      skillItems.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(query) ? "block" : "none";
+      });
+    });
+  }
+
+
+
+    function applyReveal() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+  
+    // Apply once on page load and again on scroll
+    window.addEventListener('scroll', applyReveal);
+    window.addEventListener('load', applyReveal);
+
+  </script>
+</body>
+</html>

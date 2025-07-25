@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Iam Paul Bote</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="assets/iam_pic.jpg" alt="Iam Paul Bote" class="avatar" />
+      <h1>Iam Paul Bote</h1>
+    </div>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="skill.html">Skill</a>
+      <a href="work_history.html">Work History</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="card-section reveal" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m <strong>Iam Paul Bote</strong> — Yes you read it right it's <strong>I A M(iyam)</strong> - a problem-solver at heart and a software developer by profession. I currently work at <strong>Amdocs</strong>, where I help build and improve the systems that keep businesses running smoothly behind the scenes. Before that, I worked at <strong>Smart Communications</strong>, where I provided Level 2 support to make sure everything ran like clockwork.
+    </p>
+    <p>
+
+    </p>   
+      I’m passionate about using technology to solve real-world problems. My journey in software development has been all about making things work better, faster, and more reliably. I love diving into code, automating tasks, and finding ways to make complex systems simpler and more efficient.
+    <p>
+      Over the years, I’ve developed a knack for making things more efficient. Whether it’s automating repetitive tasks, fixing bugs, or improving how software works, I enjoy finding smart solutions that save time and reduce stress. I’m all about using technology to make life easier, not just for myself but for everyone around me.
+    </p>
+    <p>
+      When I’m not coding, you’ll probably find me playing mobile games or diving into the latest tech trends. Whether it’s a new tool, framework, or innovation, I love staying curious and inspired by what’s next.
+    </p>
+	<p>
+	<strong>My goal is simple: To build things that make life easier, one line of code at a time.</strong>
+	</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Iam Paul Bote</p>
+  </footer>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <!-- Scripts -->
+  <script>
+    function applyReveal() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', applyReveal);
+    window.addEventListener('load', applyReveal);
+
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-menu');
+    burger.addEventListener('click', () => nav.classList.toggle('show'));
+  </script>
+</body>
+</html>
