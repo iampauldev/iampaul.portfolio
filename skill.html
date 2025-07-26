@@ -356,7 +356,9 @@
     </div>
   </skill-section>
   </section>
-</body>
+    <script src="script.js"></script>
+
+   
 
   <!-- Footer -->
   <footer>
@@ -366,49 +368,6 @@
   <!-- Back Button -->
   <a href="index.html" class="back-button">← Back to Home</a>
 
-  <!-- Scripts -->
-  <script>
-    // Toggle skill descriptions
-    function toggleSkill(skill) {
-      const desc = skill.querySelector('.skill-description');
-      desc.classList.toggle('show');
-    }
 
-    // Burger menu toggle
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav-menu');
-    burger.addEventListener('click', () => nav.classList.toggle('show'));
-
-	  // Skill search filter
-  const searchInput = document.getElementById("skillSearchInput");
-  const skillItems = document.querySelectorAll(".skill-item");
-
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.toLowerCase();
-      skillItems.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(query) ? "block" : "none";
-      });
-    });
-  }
-
-
-
-    function applyReveal() {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    }
-  
-    // Apply once on page load and again on scroll
-    window.addEventListener('scroll', applyReveal);
-    window.addEventListener('load', applyReveal);
-
-  </script>
 </body>
 </html>

@@ -1,10 +1,8 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Fade-in effect on load
+  // 🔹 Fade-in effect on load
   document.body.classList.add("fade-in");
 
-  // Smooth page transitions
+  // 🔹 Smooth page transitions
   document.querySelectorAll("a[href]").forEach(link => {
     const href = link.getAttribute("href");
     if (!href.startsWith("http") && !href.startsWith("#")) {
@@ -20,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Scroll-to-top button (optional)
+  // 🔹 Scroll-to-top button toggle
   const scrollBtn = document.getElementById("scrollTopBtn");
   if (scrollBtn) {
     window.addEventListener("scroll", () => {
@@ -32,16 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Burger menu toggle
-  const burger = document.getElementById("burger");
-  const navMenu = document.getElementById("nav-menu");
-  if (burger && navMenu) {
-    burger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-    });
-  }
 
-  // About section toggle (optional)
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-menu');
+    burger.addEventListener('click', () => nav.classList.toggle('show'));
+
+  // 🔹 About section toggle
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     const aboutContent = aboutSection.querySelector(".about-content");
@@ -50,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Skill search filter
+  // 🔹 Skill search filter
   const searchInput = document.getElementById("skillSearchInput");
   const skillItems = document.querySelectorAll(".skill-item");
 
@@ -63,39 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // 🔹 Initial scroll reveal trigger
+  revealOnScroll();
 });
 
-// Scroll reveal animation
+// 🔹 Scroll reveal animation
 function revealOnScroll() {
-  const reveals = document.querySelectorAll(".reveal");
-  for (const el of reveals) {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add("visible");
-    }
-  }
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-// Toggle skill card
-function toggleSkill(card) {
-  const desc = card.querySelector(".skill-description");
-  if (desc) {
-    desc.classList.toggle("show");
-  }
-}
-
-function revealOnScroll() {
-  const reveals = document.querySelectorAll('.reveal');
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
     const revealPoint = 100;
 
     if (elementTop < windowHeight - revealPoint) {
@@ -106,3 +78,12 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+
+// 🔹 Toggle skill card
+function toggleSkill(skill) {
+  const desc = skill.querySelector('.skill-description');
+  if (desc) {
+  desc.classList.toggle('show');
+  }
+}

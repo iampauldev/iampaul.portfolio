@@ -71,33 +71,7 @@
 
   <!-- Scroll to Top Button -->
   <button id="scrollTopBtn" title="Back to top">↑</button>
+  <script src="script.js"></script>
 
-  <!-- Scripts -->
-  <script>
-    // Reveal on scroll
-    function applyReveal() {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', applyReveal);
-    window.addEventListener('load', applyReveal);
-
-    // Burger menu toggle
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav-menu');
-    burger.addEventListener('click', () => nav.classList.toggle('show'));
-
-    // Scroll-to-top button
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
 </body>
 </html>

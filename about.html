@@ -62,24 +62,7 @@
 
   <!-- Back Button -->
   <a href="index.html" class="back-button">← Back to Home</a>
+  <script src="script.js"></script>
 
-  <!-- Scripts -->
-  <script>
-    function applyReveal() {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', applyReveal);
-    window.addEventListener('load', applyReveal);
-
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav-menu');
-    burger.addEventListener('click', () => nav.classList.toggle('show'));
-  </script>
 </body>
 </html>
